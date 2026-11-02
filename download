@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+# raw Kaggle files are large; download them yourself (see data/README.md)
+data/raw/*
+!data/raw/.gitkeep
+data/synthetic/
+# LaTeX build files
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz

@@ -1,0 +1,89 @@
+{
+  "mode": "SYNTHETIC DEMO",
+  "data_dir": "/home/claude/f1-logreg/data/synthetic",
+  "cleaning": {
+    "n_result_rows": 5400,
+    "n_pit_stops_total": 8346,
+    "n_pit_stops_over_cap": 19,
+    "n_races_with_pit_data": 270,
+    "n_after_races_join": 5400,
+    "n_in_races_with_pit_data": 5400,
+    "n_after_qualifying_join": 5400,
+    "n_dropped_missing_qualifying": 56,
+    "n_dropped_q1_outlier": 0,
+    "n_rows": 5344,
+    "n_races": 270,
+    "year_min": 2011,
+    "year_max": 2025
+  },
+  "n_iter": 2000,
+  "lr_grid": [
+    0.0001,
+    0.001,
+    0.01,
+    0.05,
+    0.1,
+    0.5,
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    20.0
+  ],
+  "eps_excess": 0.001,
+  "smoothness_L": {
+    "A": 0.4669924037423094,
+    "B": 0.4740568092076771
+  },
+  "stability_bound_2_over_L": {
+    "A": 4.2827249093833615,
+    "B": 4.218903644360122
+  },
+  "selected_lr": {
+    "top10_A": 1.0,
+    "top10_B": 1.0,
+    "podium_A": 0.1,
+    "podium_B": 0.1
+  },
+  "verification": {
+    "top10_A": {
+      "gd_vs_newton_max_abs_diff": 3.1086244689504383e-15,
+      "gd_excess_train_loss": 0.0,
+      "sklearn_available": true,
+      "gd_vs_sklearn_max_abs_diff": 1.0271310468823458e-09,
+      "test_pred_agreement_gd_vs_sklearn": 1.0,
+      "sklearn_test_accuracy": 0.7974683544303798
+    },
+    "top10_B": {
+      "gd_vs_newton_max_abs_diff": 3.1086244689504383e-15,
+      "gd_excess_train_loss": 0.0,
+      "sklearn_available": true,
+      "gd_vs_sklearn_max_abs_diff": 4.1794926991522985e-08,
+      "test_pred_agreement_gd_vs_sklearn": 1.0,
+      "sklearn_test_accuracy": 0.8030942334739803
+    },
+    "podium_A": {
+      "gd_vs_newton_max_abs_diff": 0.4824985748640507,
+      "gd_excess_train_loss": 0.0009481011043040166,
+      "sklearn_available": true,
+      "gd_vs_sklearn_max_abs_diff": 0.4824985942970468,
+      "test_pred_agreement_gd_vs_sklearn": 0.9943741209563994,
+      "sklearn_test_accuracy": 0.8888888888888888
+    },
+    "podium_B": {
+      "gd_vs_newton_max_abs_diff": 0.4735219284521315,
+      "gd_excess_train_loss": 0.0009155585637790897,
+      "sklearn_available": true,
+      "gd_vs_sklearn_max_abs_diff": 0.4735219125972141,
+      "test_pred_agreement_gd_vs_sklearn": 0.9915611814345991,
+      "sklearn_test_accuracy": 0.8860759493670886
+    }
+  },
+  "coefficients_top10_B": {
+    "intercept": -0.009741160037768357,
+    "q_pos": -1.587409592664408,
+    "q1_gap_pct": -0.18052538254749204,
+    "n_stops": 0.19776504283683252,
+    "median_pit_s": -0.04183519992970574
+  }
+}
